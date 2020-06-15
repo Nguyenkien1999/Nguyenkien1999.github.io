@@ -63,7 +63,7 @@ const peer = new Peer({
     host: 'https://my-peer3005.herokuapp.com/', 
     secure: true, 
     port: 443, 
-    config: customConfig 
+    //config: customConfig 
 });
 
 peer.on('open', id => {
