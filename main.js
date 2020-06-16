@@ -19,7 +19,7 @@ $.ajax({
     customConfig = data.d;
     console.log(customConfig);
   },
-  async: true
+  async: false
 });
 
 socket.on('DANH_SACH_ONLINE', arrUserInfo => {
@@ -55,8 +55,8 @@ function playStream(idVideoTag, stream) {
     video.play();
 }
 
-openStream()
-.then(stream => playStream('localStream', stream));
+//openStream()
+//.then(stream => playStream('localStream', stream));
 
 const peer = new Peer({
     key: 'peerjs', 
