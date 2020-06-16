@@ -7,7 +7,7 @@ let customConfig;
 $.ajax({
   url: "https://service.xirsys.com/ice",
   data: {
-    ident: "nguyenkien",
+    ident: "Nguyenkien",
     secret: "3800eabe-af2d-11ea-aa3b-0242ac150003",
     domain: "Nguyenkien1999.github.io",
     application: "default",
@@ -19,7 +19,7 @@ $.ajax({
     customConfig = data.d;
     console.log(customConfig);
   },
-  async: false
+  async: true
 });
 
 socket.on('DANH_SACH_ONLINE', arrUserInfo => {
@@ -55,8 +55,8 @@ function playStream(idVideoTag, stream) {
     video.play();
 }
 
-// openStream()
-// .then(stream => playStream('localStream', stream));
+openStream()
+.then(stream => playStream('localStream', stream));
 
 const peer = new Peer({
     key: 'peerjs', 
