@@ -23,7 +23,7 @@ $.ajax({
 // customConfig = res.v.iceServers;
 
   },
-  async: true
+  async: false
   
 });
 
