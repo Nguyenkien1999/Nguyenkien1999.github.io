@@ -4,24 +4,28 @@ $('#div-chat').hide();
 
 let customConfig;
 
-// $.ajax({
-//   url: "https://service.xirsys.com/ice",
-//   data: {
-//     ident: "Nguyenkien",
-//     secret: "3800eabe-af2d-11ea-aa3b-0242ac150003",
-//     domain: "Nguyenkien1999.github.io",
-//     application: "default",
-//     room: "default",
-//     secure: 1
-//   },
-//   success: function (data, status) {
-//     // data.d is where the iceServers object lives
-//     customConfig = data.d;
-//     console.log(customConfig);
-//   },
-//   async: false
+$.ajax({
+  url: "https://service.xirsys.com/ice",
+  data: {
+    ident: "Nguyenkien",
+    secret: "3800eabe-af2d-11ea-aa3b-0242ac150003",
+    domain: "Nguyenkien1999.github.io",
+    application: "default",
+    room: "default",
+    secure: 1
+  },
+  success: function (data, status) {
+    // data.d is where the iceServers object lives
+    customConfig = data.d;
+    console.log(customConfig);
+
+// console.log("IDE List :" +res.v.iceServers);
+// customConfig = res.v.iceServers;
+
+  },
+  async: true
   
-// });
+});
 
 socket.on('DANH_SACH_ONLINE', arrUserInfo => {
     $('#div-chat').show();
